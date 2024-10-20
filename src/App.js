@@ -1,16 +1,17 @@
-import { useEffect, useState } from 'react'
-import './App.css'
-import SearchIcon from './search.svg'
-import MovieCard from './MovieCard'
+import React, { useState, useEffect } from "react";
 
-const API_URL = "http://www.omdbapi.com/?apikey=d1baa5fb";
+import MovieCard from "./MovieCard";
+import SearchIcon from "./search.svg";
+import "./App.css";
+
+const API_URL = "http://www.omdbapi.com?apikey=b6003d8a";
 
 const App = () => {
     const [searchTerm, setSearchTerm] = useState("");
     const [movies, setMovies] = useState([]);
 
     useEffect(() => {
-        searchMovies("Batman");
+        searchMovies("Marvel");
     }, []);
 
     const searchMovies = async (title) => {
